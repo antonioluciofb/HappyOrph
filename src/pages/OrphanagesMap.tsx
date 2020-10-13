@@ -33,7 +33,8 @@ function OrphanagesMap() {
             >
 
                 {/* <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"/> */}
-                <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}/>
+                {/* <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}/> */}
+                <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYW50b25pb2x1Y2lvZmIiLCJhIjoiY2tnN3Q5aHZ0MDQ4bTJycXIyMzcwa2s3bSJ9.uajMh7-zN__Jti3kFdtbqQ`}/>
 
             </Map>
 
