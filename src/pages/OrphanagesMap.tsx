@@ -1,13 +1,22 @@
 import React from "react"
 
 import { Link } from "react-router-dom"
-import {FiPlus} from "react-icons/all"
+import {FiArrowRight, FiPlus} from "react-icons/all"
 
 import markerMap from '../images/iconMap.svg'
 import '../styles/pages/orphanage-map.css'
 
-import {Map , TileLayer} from "react-leaflet"
+import {Map , TileLayer, Marker, Popup} from "react-leaflet"
 import 'leaflet/dist/leaflet.css'
+import Leaflet from "leaflet"
+
+const mapIcon = Leaflet.icon({
+    iconUrl: markerMap,
+
+    iconSize: [56,66], 
+    iconAnchor: [28,66],
+    popupAnchor: [170,2]
+})
 
 function OrphanagesMap() {
     return(
@@ -20,8 +29,8 @@ function OrphanagesMap() {
                 </header>
 
                 <footer>
-                        <strong>Vitoria</strong>
-                        <span>Espirito Santo</span>
+                    <strong>Vitoria</strong>
+                    <span>Espirito Santo</span>
                 </footer>
 
             </aside>
@@ -34,7 +43,22 @@ function OrphanagesMap() {
 
                 {/* <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"/> */}
                 {/* <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}/> */}
-                <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYW50b25pb2x1Y2lvZmIiLCJhIjoiY2tnN3Q5aHZ0MDQ4bTJycXIyMzcwa2s3bSJ9.uajMh7-zN__Jti3kFdtbqQ`}/>
+                <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}/>
+
+                <Marker
+                    icon={mapIcon}
+                    position={[-20.2828012,-40.3106677]}
+                >
+
+
+                <Popup closeButton={false} minWidth={240} maxHeight={240} className="map-popup">
+                    Lar das Meninas
+                    <Link to='/orphanage/1'>
+                        <FiArrowRight size={20} color="#FFF"></FiArrowRight>
+                    </Link>
+                </Popup>
+               
+                </Marker>
 
             </Map>
 
