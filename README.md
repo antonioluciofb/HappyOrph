@@ -19,7 +19,7 @@
 ## Descrição do projeto
 
 <p align="justify">
-  Aplicação Front-End desenvolvida para a apresentaçãoe e venda de produtos de limpeza
+  Aplicação Front-End desenvolvida para o gerenciamento de orfanatos
 </p>
 
 ## Funcionalidades
