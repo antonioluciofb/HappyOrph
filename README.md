@@ -41,7 +41,7 @@
 No terminal, clone o projeto:
 
 ```
-git clone https://github.com/antonioluciofb/Meninas-Clean.git
+git clone https://github.com/antonioluciofb/HappyOrph.git
 ```
 Acesse a pasta raiz do repositório clonado e rode:
 
